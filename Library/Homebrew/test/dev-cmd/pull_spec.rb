@@ -15,7 +15,7 @@ describe "brew pull", :integration_test do
       .and output(/Current branch is new\-branch/).to_stderr
       .and be_a_failure
 
-    expect { brew "pull", "--bump", "https://api.github.com/repos/Homebrew/homebrew-core/pulls/122" }
+    expect { brew "pull", "--bump", "https://api.github.com/repos/vcrini/homebrew-core/pulls/122" }
       .to output(/Fetching patch/).to_stdout
       .and output(/Can only bump one changed formula/).to_stderr
       .and be_a_failure

@@ -9,7 +9,7 @@
 #:
 #:      ~ The URL of a PR on GitHub, using either the web page or API URL
 #:        formats. In this form, the PR may be on Homebrew/brew,
-#:        Homebrew/homebrew-core or any tap.
+#:        vcrini/homebrew-core or any tap.
 #:
 #:      ~ The URL of a commit on GitHub
 #:
@@ -86,7 +86,7 @@ module Homebrew
 
           ~ The URL of a PR on GitHub, using either the web page or API URL
             formats. In this form, the PR may be on Homebrew/brew,
-            Homebrew/homebrew-core or any tap.
+            vcrini/homebrew-core or any tap.
 
           ~ The URL of a commit on GitHub
 

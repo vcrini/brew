@@ -862,7 +862,7 @@ Each *`patch-source`* may be one of:
 
   ~ The URL of a PR on GitHub, using either the web page or API URL
     formats. In this form, the PR may be on Homebrew/brew,
-    Homebrew/homebrew-core or any tap.
+    vcrini/homebrew-core or any tap.
 
   ~ The URL of a commit on GitHub
 
@@ -1025,7 +1025,7 @@ Override warnings and enable potentially unsafe operations.
   * `cask` [`--version` | `audit` | `cat` | `cleanup` | `create` | `doctor` | `edit` | `fetch` | `home` | `info`]:
     Install macOS applications distributed as binaries.
 
-    **Homebrew/homebrew-cask**: <https://github.com/Homebrew/homebrew-cask>
+    **vcrini/homebrew-cask**: <https://github.com/vcrini/homebrew-cask>
 
   * `services` *`command`*:
     Integrates Homebrew formulae with macOS' `launchctl` manager.
@@ -1079,7 +1079,7 @@ can take several different forms:
 
   * An arbitrary URL:
     Homebrew can install formulae via URL, e.g.
-    `https://raw.github.com/Homebrew/homebrew-core/master/Formula/git.rb`.
+    `https://raw.github.com/vcrini/homebrew-core/master/Formula/git.rb`.
     The formula file will be cached for later use.
 
 ## ENVIRONMENT
@@ -1298,7 +1298,7 @@ Homebrew/brew's other current maintainers are Claudia, Michka Popoff, Shaun Jack
 
 Homebrew/brew's Linux support (and Linuxbrew) maintainers are Michka Popoff and Shaun Jackman.
 
-Homebrew/homebrew-core's other current maintainers are Claudia, Michka Popoff, Shaun Jackman, Chongyu Zhu, commitay, Izaak Beekman, Sean Molenaar, Jan Viljanen, Viktor Szakats, FX Coudert, Steven Peters, JCount, Misty De Meo and Tom Schoonjans.
+vcrini/homebrew-core's other current maintainers are Claudia, Michka Popoff, Shaun Jackman, Chongyu Zhu, commitay, Izaak Beekman, Sean Molenaar, Jan Viljanen, Viktor Szakats, FX Coudert, Steven Peters, JCount, Misty De Meo and Tom Schoonjans.
 
 Former maintainers with significant contributions include Dominyk Tiller, Tim Smith, Baptiste Fontaine, Xu Cheng, Martin Afanasjew, Brett Koonce, Charlie Sharpsteen, Jack Nagel, Adam Vandenberg, Andrew Janke, Alex Dunn, neutric, Tomasz Pajor, Uladzislau Shablinski, Alyssa Ross, ilovezfs and Homebrew's creator: Max Howell.
 
@@ -1309,8 +1309,8 @@ See our issues on GitHub:
   * **Homebrew/brew**:
     <https://github.com/Homebrew/brew/issues>
 
-  * **Homebrew/homebrew-core**:
-    <https://github.com/Homebrew/homebrew-core/issues>
+  * **vcrini/homebrew-core**:
+    <https://github.com/vcrini/homebrew-core/issues>
 
 
 [SYNOPSIS]: #SYNOPSIS "SYNOPSIS"

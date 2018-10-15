@@ -153,7 +153,7 @@ module Cask
           If this report is accurate, please duplicate it at
             #{Formatter.url("https://bugreport.apple.com/")}
           If this report is a mistake, please let us know by opening an issue at
-            #{Formatter.url("https://github.com/Homebrew/homebrew-cask/issues/new")}
+            #{Formatter.url("https://github.com/vcrini/homebrew-cask/issues/new")}
         EOS
       end
     end

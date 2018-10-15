@@ -2,7 +2,7 @@
 
 The following commands are used by Homebrew contributors to set up a fork of Homebrew's Git repository on GitHub, create a new branch and create a GitHub pull request ("PR") of the changes in that branch.
 
-Depending on the change you want to make, you need to send the pull request to the appropriate one of Homebrew's main repositories. If you want to submit a change to Homebrew core code (the `brew` implementation), you should open the pull request on [Homebrew/brew](https://github.com/Homebrew/brew). If you want to submit a change for a formula, you should open the pull request on the [homebrew/core](https://github.com/Homebrew/homebrew-core) tap or another [official tap](https://github.com/Homebrew), based on the formula type.
+Depending on the change you want to make, you need to send the pull request to the appropriate one of Homebrew's main repositories. If you want to submit a change to Homebrew core code (the `brew` implementation), you should open the pull request on [Homebrew/brew](https://github.com/Homebrew/brew). If you want to submit a change for a formula, you should open the pull request on the [homebrew/core](https://github.com/vcrini/homebrew-core) tap or another [official tap](https://github.com/Homebrew), based on the formula type.
 
 ## Submit a new version of an existing formula
 1. Use `brew bump-formula-pr` to do everything (i.e. forking, committing, pushing) with a single command. Run `brew bump-formula-pr --help` to learn more.
@@ -25,7 +25,7 @@ Depending on the change you want to make, you need to send the pull request to t
 
 ### Formulae related pull request
 
-1. [Fork the Homebrew/homebrew-core repository on GitHub](https://github.com/Homebrew/homebrew-core/fork).
+1. [Fork the vcrini/homebrew-core repository on GitHub](https://github.com/vcrini/homebrew-core/fork).
   * This creates a personal remote repository that you can push to. This is needed because only Homebrew maintainers have push access to the main repositories.
 2. Change to the directory containing Homebrew formulae:
     ```sh
@@ -68,7 +68,7 @@ To make a new branch and submit it for review, create a GitHub pull request with
     ```sh
     git push --set-upstream <YOUR_USERNAME> <YOUR_BRANCH_NAME>
     ```
-8. Go to the relevant repository (e.g. <https://github.com/Homebrew/brew>, <https://github.com/Homebrew/homebrew-core>, etc.) and create a pull request to request review and merging of the commits in your pushed branch. Explain why the change is needed and, if fixing a bug, how to reproduce the bug. Make sure you have done each step in the checklist that appears in your new PR.
+8. Go to the relevant repository (e.g. <https://github.com/Homebrew/brew>, <https://github.com/vcrini/homebrew-core>, etc.) and create a pull request to request review and merging of the commits in your pushed branch. Explain why the change is needed and, if fixing a bug, how to reproduce the bug. Make sure you have done each step in the checklist that appears in your new PR.
 9. Await feedback or a merge from Homebrew's maintainers. We typically respond to all PRs within a couple days, but it may take up to a week, depending on the maintainers' workload.
 
 Thank you!

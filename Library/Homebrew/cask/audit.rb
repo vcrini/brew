@@ -153,7 +153,7 @@ module Cask
         return unless previous_cask.version == cask.version
         return if previous_cask.sha256 == cask.sha256
 
-        add_error "only sha256 changed (see: https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md)"
+        add_error "only sha256 changed (see: https://github.com/vcrini/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/sha256.md)"
       rescue CaskError => e
         add_warning "Skipped version and checksum comparison. Reading previous version failed: #{e}"
       end
@@ -230,7 +230,7 @@ module Cask
     def check_hosting_with_appcast
       return if cask.appcast
 
-      add_appcast = "please add an appcast. See https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/appcast.md"
+      add_appcast = "please add an appcast. See https://github.com/vcrini/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/appcast.md"
 
       case cask.url.to_s
       when %r{github.com/([^/]+)/([^/]+)/releases/download/(\S+)}
@@ -257,9 +257,9 @@ module Cask
     def check_download_url_format
       odebug "Auditing URL format"
       if bad_sourceforge_url?
-        add_warning "SourceForge URL format incorrect. See https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/url.md#sourceforgeosdn-urls"
+        add_warning "SourceForge URL format incorrect. See https://github.com/vcrini/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/url.md#sourceforgeosdn-urls"
       elsif bad_osdn_url?
-        add_warning "OSDN URL format incorrect. See https://github.com/Homebrew/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/url.md#sourceforgeosdn-urls"
+        add_warning "OSDN URL format incorrect. See https://github.com/vcrini/homebrew-cask/blob/master/doc/cask_language_reference/stanzas/url.md#sourceforgeosdn-urls"
       end
     end
 
