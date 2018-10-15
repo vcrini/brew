@@ -2238,7 +2238,7 @@ class Formula
     #
     # If you maintain your own repository, you can add your own bottle links.
     # https://docs.brew.sh/Bottles
-    # You can ignore this block entirely if submitting to Homebrew/homebrew-core.
+    # You can ignore this block entirely if submitting to vcrini/homebrew-core.
     # It'll be handled for you by the Brew Test Bot.
     #
     # <pre>bottle do

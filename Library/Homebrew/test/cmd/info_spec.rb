@@ -21,14 +21,14 @@ describe "brew info", :integration_test do
 end
 
 describe Homebrew do
-  let(:remote) { "https://github.com/Homebrew/homebrew-core" }
+  let(:remote) { "https://github.com/vcrini/homebrew-core" }
 
   specify "::github_remote_path" do
     expect(subject.github_remote_path(remote, "Formula/git.rb"))
-      .to eq("https://github.com/Homebrew/homebrew-core/blob/master/Formula/git.rb")
+      .to eq("https://github.com/vcrini/homebrew-core/blob/master/Formula/git.rb")
 
     expect(subject.github_remote_path("#{remote}.git", "Formula/git.rb"))
-      .to eq("https://github.com/Homebrew/homebrew-core/blob/master/Formula/git.rb")
+      .to eq("https://github.com/vcrini/homebrew-core/blob/master/Formula/git.rb")
 
     expect(subject.github_remote_path("git@github.com:user/repo", "foo.rb"))
       .to eq("https://github.com/user/repo/blob/master/foo.rb")

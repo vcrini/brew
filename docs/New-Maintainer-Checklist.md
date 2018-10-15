@@ -18,7 +18,7 @@ contributions. You should also be making contributions to Homebrew every month
 unless you are ill or on vacation (and please let another maintainer know if
 that's the case so we're aware you won't be able to help while you are out).
 
-You will need to watch Homebrew/brew and/or Homebrew/homebrew-core. Let us know
+You will need to watch Homebrew/brew and/or vcrini/homebrew-core. Let us know
 which (or both) so we can grant you commit access appropriately.
 
 If you're no longer able to perform all of these tasks, please continue to

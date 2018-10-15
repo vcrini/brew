@@ -12,7 +12,7 @@ A *formula* is a package definition written in Ruby. It can be created with `bre
 | **Cellar**     | All **Kegs** are installed here                            | `/usr/local/Cellar`                                             |
 | **Tap**        | A Git repository of **Formulae** and/or commands | `/usr/local/Homebrew/Library/Taps/homebrew/homebrew-core`   |
 | **Bottle**     | Pre-built **Keg** used instead of building from source     | `qt-4.8.4.mavericks.bottle.tar.gz`                              |
-| **Cask**       | An [extension of Homebrew](https://github.com/Homebrew/homebrew-cask) to install macOS native apps  | `/Applications/MacDown.app/Contents/SharedSupport/bin/macdown` |
+| **Cask**       | An [extension of Homebrew](https://github.com/vcrini/homebrew-cask) to install macOS native apps  | `/Applications/MacDown.app/Contents/SharedSupport/bin/macdown` |
 | **Brew Bundle**| An [extension of Homebrew](https://github.com/Homebrew/homebrew-bundle) to describe dependencies    | `brew 'myservice', restart_service: true` |
 
 ## An introduction
@@ -21,7 +21,7 @@ Homebrew uses Git for downloading updates and contributing to the project.
 
 Homebrew installs to the `Cellar` and then symlinks some of the installation into `/usr/local` so that other programs can see what's going on. We suggest you `brew ls` a few of the kegs in your Cellar to see how it is all arranged.
 
-Packages are installed according to their formulae, which live in `/usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula`. Check one out a simple one, e.g. `brew edit etl` (or [`etl`](https://github.com/Homebrew/homebrew-core/blob/master/Formula/etl.rb)) or a more advanced one, e.g. `brew edit git` (or [`git`](https://github.com/Homebrew/homebrew-core/blob/master/Formula/git.rb)).
+Packages are installed according to their formulae, which live in `/usr/local/Homebrew/Library/Taps/homebrew/homebrew-core/Formula`. Check one out a simple one, e.g. `brew edit etl` (or [`etl`](https://github.com/vcrini/homebrew-core/blob/master/Formula/etl.rb)) or a more advanced one, e.g. `brew edit git` (or [`git`](https://github.com/vcrini/homebrew-core/blob/master/Formula/git.rb)).
 
 ## Basic instructions
 
@@ -31,7 +31,7 @@ Before submitting a new formula make sure your package:
 
 * meets all our [Acceptable Formulae](Acceptable-Formulae.md) requirements
 * isn't already in Homebrew (check `brew search <formula>`)
-* isn't already waiting to be merged (check the [issue tracker](https://github.com/Homebrew/homebrew-core/pulls))
+* isn't already waiting to be merged (check the [issue tracker](https://github.com/vcrini/homebrew-core/pulls))
 * is still supported by upstream (i.e. doesn't require extensive patching)
 * has a stable, tagged version (i.e. not just a GitHub repository with no versions)
 * passes all `brew audit --new-formula <formula>` tests
@@ -118,7 +118,7 @@ Homebrew’s OpenSSL is [`keg_only`](https://www.rubydoc.info/github/Homebrew/br
 to avoid conflicting with the system so sometimes formulae need to
 have environment variables set or special configuration flags passed
 to locate our OpenSSL. You can see this mechanism in the
-[`clamav`](https://github.com/Homebrew/homebrew-core/blob/89c4574ef1a6d15e92196637ff315a0a4bb3e289/Formula/clamav.rb#L37)
+[`clamav`](https://github.com/vcrini/homebrew-core/blob/89c4574ef1a6d15e92196637ff315a0a4bb3e289/Formula/clamav.rb#L37)
 formula. Usually this is unnecessary because Homebrew sets up our [build environment](https://github.com/Homebrew/brew/blob/master/Library/Homebrew/extend/ENV/super.rb)
 to favour finding [`keg_only`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#keg_only-class_method) formulae first.
 
@@ -160,15 +160,15 @@ description can be overridden using the normal option syntax (in this case, the 
     ```
 * Some [`Requirement`](https://www.rubydoc.info/github/Homebrew/brew/master/Requirement)s can also take a string specifying their minimum version that the formula depends on.
 
-We frown on [`option`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#option-class_method)s in Homebrew/homebrew-core as they are not tested by CI.
+We frown on [`option`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#option-class_method)s in vcrini/homebrew-core as they are not tested by CI.
 
 ### Specifying conflicts with other formulae
 
 Sometimes there’s hard conflict between formulae, and it can’t be avoided or circumvented with [`keg_only`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#keg_only-class_method).
 
-A good example formula for minor conflict is [`mbedtls`](https://github.com/Homebrew/homebrew-core/blob/master/Formula/mbedtls.rb), which ships and compiles a "Hello World" executable. This is obviously non-essential to `mbedtls`’s functionality, and conflict with the popular GNU [`hello`](https://github.com/Homebrew/homebrew-core/blob/master/Formula/hello.rb) formula would be overkill, so we just [remove it](https://github.com/Homebrew/homebrew-core/blob/966273060ad507fea490bd931971963de8b1a1dc/Formula/mbedtls.rb#L30-L31) during the installation process.
+A good example formula for minor conflict is [`mbedtls`](https://github.com/vcrini/homebrew-core/blob/master/Formula/mbedtls.rb), which ships and compiles a "Hello World" executable. This is obviously non-essential to `mbedtls`’s functionality, and conflict with the popular GNU [`hello`](https://github.com/vcrini/homebrew-core/blob/master/Formula/hello.rb) formula would be overkill, so we just [remove it](https://github.com/vcrini/homebrew-core/blob/966273060ad507fea490bd931971963de8b1a1dc/Formula/mbedtls.rb#L30-L31) during the installation process.
 
-[`pdftohtml`](https://github.com/Homebrew/homebrew-core/blob/master/Formula/pdftohtml.rb) provides an example of a serious
+[`pdftohtml`](https://github.com/vcrini/homebrew-core/blob/master/Formula/pdftohtml.rb) provides an example of a serious
 conflict, where both formula ship an identically-named binary that is essential to functionality, so a [`conflicts_with`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#conflicts_with-class_method) is preferable.
 
 As a general rule, [`conflicts_with`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#conflicts_with-class_method) should be a last-resort option. It’s a fairly blunt instrument.
@@ -193,7 +193,7 @@ When a dependent of a formula fails against a new version of that dependency it 
 
 Sometimes formulae have version schemes that change such that a direct comparison between two versions no longer produces the correct result. For example, a project might be version `13` and then decide to become `1.0.0`. As `13` is translated to `13.0.0` by our versioning system by default this requires intervention.
 
-When a version scheme of a formula fails to recognise a new version as newer it must receive a [`version_scheme`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#version_scheme%3D-class_method). An example of this can be seen [here](https://github.com/Homebrew/homebrew-core/pull/4006).
+When a version scheme of a formula fails to recognise a new version as newer it must receive a [`version_scheme`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#version_scheme%3D-class_method). An example of this can be seen [here](https://github.com/vcrini/homebrew-core/pull/4006).
 
 ### Double-check for dependencies
 
@@ -233,7 +233,7 @@ class Foo < Formula
 end
 ```
 
-[`jrnl`](https://github.com/Homebrew/homebrew-core/blob/master/Formula/jrnl.rb) is an example of a formula that does this well. The end result means the user doesn't have to use `pip` or Python and can just run `jrnl`.
+[`jrnl`](https://github.com/vcrini/homebrew-core/blob/master/Formula/jrnl.rb) is an example of a formula that does this well. The end result means the user doesn't have to use `pip` or Python and can just run `jrnl`.
 
 [homebrew-pypi-poet](https://github.com/tdsmith/homebrew-pypi-poet) can help you generate [`resource`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#resource-class_method) stanzas for the dependencies of your Python application.
 
@@ -257,7 +257,7 @@ function. The environment variable `HOME` is set to [`testpath`](https://www.rub
 
 We want tests that don't require any user input and test the basic functionality of the application. For example `foo build-foo input.foo` is a good test and (despite their widespread use) `foo --version` and `foo --help` are bad tests. However, a bad test is better than no test at all.
 
-See [`cmake`](https://github.com/Homebrew/homebrew-core/blob/master/Formula/cmake.rb) for an example of a formula with a good test. The formula writes a basic `CMakeLists.txt` file into the test directory then calls CMake to generate Makefiles. This test checks that CMake doesn't e.g. segfault during basic operation. Another good example is [`tinyxml2`](https://github.com/Homebrew/homebrew-core/blob/master/Formula/tinyxml2.rb), which writes a small C++ source file into the test directory, compiles and links it against the tinyxml2 library and finally checks that the resulting program runs successfully.
+See [`cmake`](https://github.com/vcrini/homebrew-core/blob/master/Formula/cmake.rb) for an example of a formula with a good test. The formula writes a basic `CMakeLists.txt` file into the test directory then calls CMake to generate Makefiles. This test checks that CMake doesn't e.g. segfault during basic operation. Another good example is [`tinyxml2`](https://github.com/vcrini/homebrew-core/blob/master/Formula/tinyxml2.rb), which writes a small C++ source file into the test directory, compiles and links it against the tinyxml2 library and finally checks that the resulting program runs successfully.
 
 ### Manuals
 
@@ -275,7 +275,7 @@ If you’re not sure about the name, check its homepage, Wikipedia page and [wha
 
 When Homebrew already has a formula called `foo` we typically do not accept requests to replace that formula with something else also named `foo`. This is to avoid both confusing and surprising users’ expectations.
 
-When two formulae share an upstream name, e.g. [AESCrypt](https://github.com/Homebrew/homebrew-core/blob/master/Formula/aescrypt.rb) and [AES Crypt](https://github.com/Homebrew/homebrew-core/blob/master/Formula/aescrypt-packetizer.rb) the newer formula must typically adapt its name to avoid conflict with the current formula.
+When two formulae share an upstream name, e.g. [AESCrypt](https://github.com/vcrini/homebrew-core/blob/master/Formula/aescrypt.rb) and [AES Crypt](https://github.com/vcrini/homebrew-core/blob/master/Formula/aescrypt-packetizer.rb) the newer formula must typically adapt its name to avoid conflict with the current formula.
 
 If you’re *still* not sure, just commit. We’ll apply some arbitrary rule and make a decision 😉.
 
@@ -328,9 +328,9 @@ Ensure you reference any relevant GitHub issue, e.g. `Closes #12345` in the comm
 
 Now you just need to push your commit to GitHub.
 
-If you haven’t forked Homebrew yet, [go to the `homebrew-core` repository and hit the Fork button](https://github.com/Homebrew/homebrew-core).
+If you haven’t forked Homebrew yet, [go to the `homebrew-core` repository and hit the Fork button](https://github.com/vcrini/homebrew-core).
 
-If you have already forked Homebrew on GitHub, then you can manually push (just make sure you have been pulling from the `Homebrew/homebrew-core` master):
+If you have already forked Homebrew on GitHub, then you can manually push (just make sure you have been pulling from the `vcrini/homebrew-core` master):
 
 ```sh
 git push https://github.com/myname/homebrew-core/ <what-you-called-your-branch>
@@ -667,9 +667,9 @@ end
 
 [`option`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#option-class_method) names should be prefixed with the words `with` or `without`. For example, an option to run a test suite should be named `--with-test` or `--with-check` rather than `--test`, and an option to enable a shared library `--with-shared` rather than `--shared` or `--enable-shared`.
 
-**Note:** [`option`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#option-class_method)s that aren’t `build.with? ` or `build.without?` should be deprecated with [`deprecated_option`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#deprecated_option-class_method). See [`wget`](https://github.com/Homebrew/homebrew-core/blob/3f762b63c6fbbd49191ffdf58574d7e18937d93f/Formula/wget.rb#L27-L31) for an example.
+**Note:** [`option`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#option-class_method)s that aren’t `build.with? ` or `build.without?` should be deprecated with [`deprecated_option`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#deprecated_option-class_method). See [`wget`](https://github.com/vcrini/homebrew-core/blob/3f762b63c6fbbd49191ffdf58574d7e18937d93f/Formula/wget.rb#L27-L31) for an example.
 
-We frown on [`option`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#option-class_method)s in Homebrew/homebrew-core as they are not tested by CI.
+We frown on [`option`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#option-class_method)s in vcrini/homebrew-core as they are not tested by CI.
 
 ### File level operations
 
@@ -733,7 +733,7 @@ system "make"  # separate make and make install steps
 system "make", "install"
 ```
 
-If that fixes it, please open an [issue](https://github.com/Homebrew/homebrew-core/issues) so that we can fix it for everyone.
+If that fixes it, please open an [issue](https://github.com/vcrini/homebrew-core/issues) so that we can fix it for everyone.
 
 ### Still won’t work?
 

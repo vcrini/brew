@@ -636,7 +636,7 @@ end
 # A specialized {Tap} class for the core formulae
 class CoreTap < Tap
   def default_remote
-    "https://github.com/Homebrew/homebrew-core".freeze
+    "https://github.com/vcrini/homebrew-core".freeze
   end
 
   # @private

@@ -248,7 +248,7 @@ Homebrew Cask also accepts three other forms in place of plain tokens:
     `/usr/local/Library/Taps/homebrew/homebrew-cask/Casks/google-chrome.rb`
 
   * A `curl`-retrievable URI to a Cask file, e.g.
-    `https://raw.githubusercontent.com/Homebrew/homebrew-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google-chrome.rb`
+    `https://raw.githubusercontent.com/vcrini/homebrew-cask/f25b6babcd398abf48e33af3d887b2d00de1d661/Casks/google-chrome.rb`
 
 ## ENVIRONMENT
 
@@ -275,7 +275,7 @@ Other environment variables:
 
 The Homebrew Cask home page: <https://caskroom.github.io/>
 
-The Homebrew Cask GitHub page: <https://github.com/Homebrew/homebrew-cask>
+The Homebrew Cask GitHub page: <https://github.com/vcrini/homebrew-cask>
 
 `brew`(1), `curl`(1)
 
@@ -288,7 +288,7 @@ Man page format based on `brew.1.md` from Homebrew.
 ## BUGS
 
 We still have bugs - and we are busy fixing them!  If you have a problem, don't
-be shy about reporting it on our [GitHub issues page](https://github.com/Homebrew/homebrew-cask/issues?state=open).
+be shy about reporting it on our [GitHub issues page](https://github.com/vcrini/homebrew-cask/issues?state=open).
 
 When reporting bugs, remember that Homebrew Cask is an separate repository within
 Homebrew. Do your best to direct bug reports to the appropriate repository. If

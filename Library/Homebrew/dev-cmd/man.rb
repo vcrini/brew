@@ -110,7 +110,7 @@ module Homebrew
       readme.read[%r{(Homebrew/brew's Linux support \(and Linuxbrew\) maintainers are .*\.)}, 1]
             .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1')
     variables[:core_maintainers] =
-      readme.read[%r{(Homebrew/homebrew-core's other current maintainers .*\.)}, 1]
+      readme.read[%r{(vcrini/homebrew-core's other current maintainers .*\.)}, 1]
             .gsub(/\[([^\]]+)\]\([^)]+\)/, '\1')
     variables[:former_maintainers] =
       readme.read[/(Former maintainers .*\.)/, 1]

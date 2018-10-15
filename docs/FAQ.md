@@ -110,7 +110,7 @@ hub pull someone_else
 
 Or:
 
-    brew pull https://github.com/Homebrew/homebrew-core/pull/1234
+    brew pull https://github.com/vcrini/homebrew-core/pull/1234
 
 ## Why does Homebrew prefer I install to `/usr/local`?
 
