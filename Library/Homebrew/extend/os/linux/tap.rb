@@ -3,7 +3,7 @@ class CoreTap < Tap
     if ENV["HOMEBREW_FORCE_HOMEBREW_ORG"]
       "https://github.com/vcrini/homebrew-core".freeze
     else
-      "https://github.com/vcrini/homebrew-core".freeze
+      "https://github.com/Linuxbrew/homebrew-core".freeze
     end
   end
 end
