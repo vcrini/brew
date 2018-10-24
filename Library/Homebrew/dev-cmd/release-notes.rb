@@ -47,7 +47,7 @@ module Homebrew
 
     output.map! do |s|
       s.gsub(%r{.*Merge pull request #(\d+) from ([^/]+)/[^>]*(>>)*},
-             "https://github.com/Homebrew/brew/pull/\\1 (@\\2)")
+             "https://github.com/vcrini/brew/pull/\\1 (@\\2)")
     end
     if args.markdown?
       output.map! do |s|

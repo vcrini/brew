@@ -61,7 +61,7 @@ If they accept, follow a few steps to get them set up:
 - Invite them to the [`machomebrew` private maintainers Slack](https://machomebrew.slack.com/admin/invites) (and ensure they've read the [communication guidelines](Maintainer-Guidelines.md#communication)).
 - Ask them to disable SMS as a 2FA device or fallback on their GitHub account in favour of using one of the other authentication methods.
 - Ask them to (regularly) review remove any unneeded [GitHub personal access tokens](https://github.com/settings/tokens).
-- Add them to [Homebrew/brew's README](https://github.com/Homebrew/brew/edit/master/README.md).
+- Add them to [Homebrew/brew's README](https://github.com/vcrini/brew/edit/master/README.md).
 
 If they are also interested in doing system administration work:
 
@@ -74,7 +74,7 @@ If they want to consume raw anonymous aggregate analytics data (rather than use 
 
 Once they have been active maintainers for at least a year and had some activity on more than one Homebrew organisation repository (or one repository and helped with system administration work):
 
-- Homebrew's [Software Freedom Conservancy](https://sfconservancy.org) Project Leadership Committee can take a vote on whether to extend an offer to the maintainer to join the committee. If they accept, email their name, email and employer to homebrew@sfconservancy.org, make them [owners on the Homebrew GitHub organisation](https://github.com/orgs/Homebrew/people) and add them to the relevant section of the [Homebrew/brew's README](https://github.com/Homebrew/brew/edit/master/README.md).
+- Homebrew's [Software Freedom Conservancy](https://sfconservancy.org) Project Leadership Committee can take a vote on whether to extend an offer to the maintainer to join the committee. If they accept, email their name, email and employer to homebrew@sfconservancy.org, make them [owners on the Homebrew GitHub organisation](https://github.com/orgs/Homebrew/people) and add them to the relevant section of the [Homebrew/brew's README](https://github.com/vcrini/brew/edit/master/README.md).
 
 If there are problems, ask them to step down as a maintainer and revoke their access to all of the above.
 

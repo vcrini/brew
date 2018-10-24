@@ -36,7 +36,7 @@ Before submitting a new formula make sure your package:
 * has a stable, tagged version (i.e. not just a GitHub repository with no versions)
 * passes all `brew audit --new-formula <formula>` tests
 
-Before submitting a new formula make sure you read over our [contribution guidelines](https://github.com/Homebrew/brew/blob/master/CONTRIBUTING.md#contributing-to-homebrew).
+Before submitting a new formula make sure you read over our [contribution guidelines](https://github.com/vcrini/brew/blob/master/CONTRIBUTING.md#contributing-to-homebrew).
 
 ### Grab the URL
 
@@ -119,7 +119,7 @@ to avoid conflicting with the system so sometimes formulae need to
 have environment variables set or special configuration flags passed
 to locate our OpenSSL. You can see this mechanism in the
 [`clamav`](https://github.com/vcrini/homebrew-core/blob/89c4574ef1a6d15e92196637ff315a0a4bb3e289/Formula/clamav.rb#L37)
-formula. Usually this is unnecessary because Homebrew sets up our [build environment](https://github.com/Homebrew/brew/blob/master/Library/Homebrew/extend/ENV/super.rb)
+formula. Usually this is unnecessary because Homebrew sets up our [build environment](https://github.com/vcrini/brew/blob/master/Library/Homebrew/extend/ENV/super.rb)
 to favour finding [`keg_only`](https://www.rubydoc.info/github/Homebrew/brew/master/Formula#keg_only-class_method) formulae first.
 
 **Important:** `$(brew --prefix)/bin` is NOT on the `PATH` during formula installation. If you have dependencies at build time, you must specify them and `brew` will add them to the `PATH` or create a [`Requirement`](https://www.rubydoc.info/github/Homebrew/brew/master/Requirement).

@@ -1307,7 +1307,7 @@ Former maintainers with significant contributions include Dominyk Tiller, Tim Sm
 See our issues on GitHub:
 
   * **Homebrew/brew**:
-    <https://github.com/Homebrew/brew/issues>
+    <https://github.com/vcrini/brew/issues>
 
   * **vcrini/homebrew-core**:
     <https://github.com/vcrini/homebrew-core/issues>

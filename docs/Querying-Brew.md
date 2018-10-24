@@ -25,7 +25,7 @@ From the manpage:
 
 The current schema version is `v1`. Note that fields may be added to the schema as needed without incrementing the schema. Any significant breaking changes will cause a change to the schema version.
 
-The schema itself is not currently documented outside of the code in [`formula.rb`](https://github.com/Homebrew/brew/blob/e9b9ea49a16b7879731d01ff2842460d33257a06/Library/Homebrew/formula.rb#L1594-L1680) that generates it.
+The schema itself is not currently documented outside of the code in [`formula.rb`](https://github.com/vcrini/brew/blob/e9b9ea49a16b7879731d01ff2842460d33257a06/Library/Homebrew/formula.rb#L1594-L1680) that generates it.
 
 ## Examples
 

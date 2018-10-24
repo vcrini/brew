@@ -76,7 +76,7 @@ the launchctl PATH for *all users*. For earlier versions of macOS, see
 [this page](https://developer.apple.com/legacy/library/qa/qa1067/_index.html).
 
 ## How do I contribute to Homebrew?
-Read our [contribution guidelines](https://github.com/Homebrew/brew/blob/master/CONTRIBUTING.md#contributing-to-homebrew).
+Read our [contribution guidelines](https://github.com/vcrini/brew/blob/master/CONTRIBUTING.md#contributing-to-homebrew).
 
 ## Why do you compile everything?
 Homebrew provides pre-compiled versions for many formulae. These

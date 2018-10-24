@@ -75,7 +75,7 @@ This will install your Node module in npm's global module style with a custom pr
 bin.install_symlink Dir["#{libexec}/bin/*"]
 ```
 
-**Note:** Because of a required workaround for `npm@5` calling `npm pack` we currently don't support installing modules (from non-npm registry tarballs), which require a prepublish step (e.g. for transpiling sources). See [Homebrew/brew#2820](https://github.com/Homebrew/brew/pull/2820) for more information.
+**Note:** Because of a required workaround for `npm@5` calling `npm pack` we currently don't support installing modules (from non-npm registry tarballs), which require a prepublish step (e.g. for transpiling sources). See [Homebrew/brew#2820](https://github.com/vcrini/brew/pull/2820) for more information.
 
 ### Installing module dependencies locally with `local_npm_install_args`
 

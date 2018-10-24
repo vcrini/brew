@@ -544,7 +544,7 @@ module Homebrew
 
             Without a correctly configured origin, Homebrew won't update
             properly. You can solve this by adding the Homebrew remote:
-              git -C "#{HOMEBREW_REPOSITORY}" remote add origin #{Formatter.url("https://github.com/Homebrew/brew.git")}
+              git -C "#{HOMEBREW_REPOSITORY}" remote add origin #{Formatter.url("https://github.com/vcrini/brew.git")}
           EOS
         elsif origin !~ %r{Homebrew/brew(\.git|/)?$}
           <<~EOS
@@ -556,7 +556,7 @@ module Homebrew
 
             Unless you have compelling reasons, consider setting the
             origin remote to point at the main repository by running:
-              git -C "#{HOMEBREW_REPOSITORY}" remote set-url origin #{Formatter.url("https://github.com/Homebrew/brew.git")}
+              git -C "#{HOMEBREW_REPOSITORY}" remote set-url origin #{Formatter.url("https://github.com/vcrini/brew.git")}
           EOS
         end
       end

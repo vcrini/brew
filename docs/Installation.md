@@ -36,7 +36,7 @@ works relative to the competition is **because** we recommend installing
 to `/usr/local`. *Pick another prefix at your peril!*
 
 ```sh
-mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
+mkdir homebrew && curl -L https://github.com/vcrini/brew/tarball/master | tar xz --strip 1 -C homebrew
 ```
 
 ### Multiple installations
