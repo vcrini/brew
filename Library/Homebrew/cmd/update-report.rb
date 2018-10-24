@@ -65,8 +65,9 @@ module Homebrew
         end
       end
     end
-
+    ohai "-->before installing tap"
     install_core_tap_if_necessary
+    ohai "-->Done"
 
     hub = ReporterHub.new
     updated = false
