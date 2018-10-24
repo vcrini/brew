@@ -1,4 +1,5 @@
 # Force UTF-8 to avoid encoding issues for users with broken locale settings.
+set -x
 if [[ "$(locale charmap 2>/dev/null)" != "UTF-8" ]]
 then
   export LC_ALL="en_US.UTF-8"
