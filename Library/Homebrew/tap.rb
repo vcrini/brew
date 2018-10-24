@@ -276,6 +276,7 @@ class Tap
     args =  %W[clone #{requested_remote} #{path}]
     args << "--depth=1" unless full_clone
     args << "-q" if quiet
+    ohai "args #{args}"
 
     begin
       safe_system "git", *args
