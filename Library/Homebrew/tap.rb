@@ -271,8 +271,8 @@ class Tap
     end
 
     clear_cache
-
-    ohai "Tapping #{name}" unless quiet
+    ohai "ciao"
+    ohai "-->Tapping #{name}" unless quiet
     args =  %W[clone #{requested_remote} #{path}]
     args << "--depth=1" unless full_clone
     args << "-q" if quiet
